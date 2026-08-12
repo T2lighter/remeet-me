@@ -13,3 +13,4 @@ desktop.ini
 # Runtime artifacts generated when running the skill locally
 **/progress.md
 **/report.md
+**/archive/
