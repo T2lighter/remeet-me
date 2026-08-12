@@ -1,4 +1,4 @@
-# interview-me
+# remeet-me
 
 > 通过结构化的自我采访，重新认识一个阶段的自己。
 >
@@ -8,7 +8,7 @@
 
 ## English (brief)
 
-**interview-me** is a Claude Code skill for reviewing a life period — the past half-year, a year, or the time after a turning point. Instead of asking the AI to summarize you, it makes Claude act as a **curious interviewer** who tracks the threads surfacing in what you say, digs one layer at a time (fact → feeling → reason → pattern → change), and finally produces a profile report faithful to your own words.
+**remeet-me** is a Claude Code skill for reviewing a life period — the past half-year, a year, or the time after a turning point. Instead of asking the AI to summarize you, it makes Claude act as a **curious interviewer** who tracks the threads surfacing in what you say, digs one layer at a time (fact → feeling → reason → pattern → change), and finally produces a profile report faithful to your own words.
 
 - **Role**: interviewer (draws you out), not analyst (labels you)
 - **Native language**: Chinese — the skill content is Chinese and works best for Chinese-speaking self-reflection
@@ -19,10 +19,10 @@
 
 ```bash
 # macOS / Linux
-git clone https://github.com/T2lighter/interview-me.git ~/.claude/skills/interview-me
+git clone https://github.com/T2lighter/remeet-me.git ~/.claude/skills/remeet-me
 
 # Windows (PowerShell)
-git clone https://github.com/T2lighter/interview-me.git "$env:USERPROFILE\.claude\skills\interview-me"
+git clone https://github.com/T2lighter/remeet-me.git "$env:USERPROFILE\.claude\skills\remeet-me"
 ```
 
 Then tell Claude: *"帮我采访一下我自己这半年的变化"* — the skill auto-triggers.
@@ -33,12 +33,12 @@ Then tell Claude: *"帮我采访一下我自己这半年的变化"* — the skil
 
 ### 这是什么
 
-`interview-me` 是一个 Claude Code 技能，帮你**通过自我采访，重新认识一个阶段的自己**——可能是最近半年、一年、某段关系结束后、某次职业转折之后。
+`remeet-me` 是一个 Claude Code 技能，帮你**通过自我采访，重新认识一个阶段的自己**——可能是最近半年、一年、某段关系结束后、某次职业转折之后。
 
 它不是"帮我总结一下上半年"那种年度总结器。区别在于：
 
 - **年度总结**：AI 直接给你一个答案（通常是成就清单 + 成长叙事）。
-- **interview-me**：AI 扮演一个**好奇的采访者**，追踪你说话过程中浮现的线索，一层一层追问（事实 → 感受 → 原因 → 模式 → 变化），最后把**你自己说过的话**整理成一份忠实的人物访谈报告。
+- **remeet-me**：AI 扮演一个**好奇的采访者**，追踪你说话过程中浮现的线索，一层一层追问（事实 → 感受 → 原因 → 模式 → 变化），最后把**你自己说过的话**整理成一份忠实的人物访谈报告。
 
 ### 为什么需要一个专门的技能
 
@@ -65,13 +65,13 @@ Then tell Claude: *"帮我采访一下我自己这半年的变化"* — the skil
 
 ```bash
 # macOS / Linux
-git clone https://github.com/T2lighter/interview-me.git ~/.claude/skills/interview-me
+git clone https://github.com/T2lighter/remeet-me.git ~/.claude/skills/remeet-me
 
 # Windows (PowerShell)
-git clone https://github.com/T2lighter/interview-me.git "$env:USERPROFILE\.claude\skills\interview-me"
+git clone https://github.com/T2lighter/remeet-me.git "$env:USERPROFILE\.claude\skills\remeet-me"
 ```
 
-如果 `interview-me` 目录已存在，先删除或改名。安装后无需任何配置。
+如果 `remeet-me` 目录已存在，先删除或改名。安装后无需任何配置。
 
 ### 如何使用
 
@@ -80,7 +80,7 @@ git clone https://github.com/T2lighter/interview-me.git "$env:USERPROFILE\.claud
 3. 开始采访——一次问一个问题，从具体事件进入，逐层深挖。可以用语音、意识流，说乱了也没关系。
 4. 随时可以说"先不展开这个""这个问题以后再说"，节奏由你控制。
 5. 聊得差不多了，让 Claude 生成报告（存为 `report.md`）。
-6. 访谈可以跨多次对话——进度自动存在 `interview-me/progress.md`。
+6. 访谈可以跨多次对话——进度自动存在 `remeet-me/progress.md`。
 
 ### 什么时候会触发
 
@@ -89,7 +89,7 @@ git clone https://github.com/T2lighter/interview-me.git "$env:USERPROFILE\.claud
 ### 目录结构
 
 ```
-interview-me/
+remeet-me/
 ├── SKILL.md              # 技能主体（核心指令）
 ├── references/
 │   └── techniques.md     # 提问技巧内功（按需深入查阅）
