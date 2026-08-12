@@ -8,9 +8,9 @@
   <img src="https://img.shields.io/badge/lang-中文-22c55e.svg" alt="Language">
 </p>
 
-> 通过结构化的自我采访，重新认识一个阶段的自己。
+> 通过结构化的自我采访，重新认识一个阶段的自己——多次访谈之间，沉淀出跨周期的变化。
 >
-> A Claude Code skill that turns life-review into a structured self-interview — Claude plays a curious interviewer, not an analyst.
+> A Claude Code skill that turns life-review into a structured self-interview — Claude plays a curious interviewer, not an analyst. Now with cross-cycle memory: prior reports become silent context, and each new report shows how you've changed.
 
 ---
 
@@ -22,6 +22,7 @@
 - **Native language**: Chinese — the skill content is Chinese and works best for Chinese-speaking self-reflection
 - **Grounded in**: motivational interviewing (OARS), Bloom's taxonomy, qualitative-research methodology, life-direction research (PERMA, Ikigai, Oishi's three dimensions)
 - **Refuses**: chicken-soup "growth" narratives, labeling ("you are a ___ person"), forced positive framing
+- **Cross-cycle memory**: finished reports are archived (never overwritten); on a new cycle, prior reports become silent background context, and the report gains a "longitudinal change" section.
 
 ### Install
 
@@ -69,6 +70,8 @@ Then tell Claude: *"帮我采访一下我自己这半年的变化"* — the skil
 - **五层追问**：事实 → 感受 → 原因 → 模式 → 变化，保证深挖不跳层。
 - **动态追踪主线**：默认模块只是菜单，真正问什么由你说的话决定。
 - **断点续传**：长对话跨多次进行，进度存成 `progress.md`，随时接着聊。
+- **跨周期记忆**：每个阶段的报告归档保留（不互相覆盖）；新一轮访谈时，历史作为沉默的背景——不主动炫耀"记得你"，只在当前线索撞上历史重复时才轻轻提起。
+- **纵向变化**：报告里看主题怎么跨周期迁移、哪些词反复出现，把"单阶段快照"变成有时间线的东西。
 - **人物访谈报告**：最后生成一份有事件、有原因、有认知变化的报告，不是成就清单。
 - **拒绝鸡汤和贴标签**：允许矛盾、平淡、"还没想清楚"，不强行"成长"。
 
@@ -104,6 +107,7 @@ git clone https://github.com/T2lighter/remeet-me.git "$env:USERPROFILE\.claude\s
 4. 随时可以说"先不展开这个""这个问题以后再说"，节奏由你控制。
 5. 聊得差不多了，让 Claude 生成报告（存为 `report.md`）。
 6. 访谈可以跨多次对话——进度自动存在 `remeet-me/progress.md`。
+7. 一个阶段做完、报告生成后，可选**归档**（方便以后回看、对比）；下次开新周期，历史会作为背景记着，碰到重复线索会提起。也可以"就做这一次"、不留历史。
 
 ### 什么时候会触发
 
@@ -120,7 +124,7 @@ remeet-me/
 └── LICENSE
 ```
 
-运行技能时生成的 `progress.md`、`report.md` 是本地运行产物，不纳入仓库。
+运行时生成的 `progress.md`、`report.md`（当前周期）与 `archive/`（历史周期归档）均为本地产物，不纳入仓库。
 
 ## License
 
