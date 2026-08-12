@@ -115,6 +115,8 @@ git clone https://github.com/T2lighter/remeet-me.git "$env:USERPROFILE\.claude\s
 
 ### 目录结构
 
+**仓库本身**（clone 后得到）：
+
 ```
 remeet-me/
 ├── SKILL.md              # 技能主体（核心指令）
@@ -124,7 +126,14 @@ remeet-me/
 └── LICENSE
 ```
 
-运行时生成的 `progress.md`、`report.md`（当前周期）与 `archive/`（历史周期归档）均为本地产物，不纳入仓库。
+**运行时产物**（技能在你当前工作目录下创建，不纳入仓库）：
+
+```
+remeet-me/
+├── progress.md           # 当前周期进度（纯原词）
+├── report.md             # 当前周期报告
+└── archive/              # 历史周期归档（每轮一份）
+```
 
 ## License
 
