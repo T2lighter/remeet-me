@@ -3,20 +3,20 @@
 <p align="center">
   <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
   &nbsp;
-  <img src="https://img.shields.io/badge/platform-Claude_Code-7c3aed.svg" alt="Platform">
+  <img src="https://img.shields.io/badge/runtime-Multi--Runtime-7c3aed.svg" alt="Multi-Runtime">
   &nbsp;
   <img src="https://img.shields.io/badge/lang-中文-22c55e.svg" alt="Language">
 </p>
 
 > 通过结构化的自我采访，重新认识一个阶段的自己——多次访谈之间，沉淀出跨周期的变化。
 >
-> A Claude Code skill that turns life-review into a structured self-interview — Claude plays a curious interviewer, not an analyst. Now with cross-cycle memory: prior reports become silent context, and each new report shows how you've changed.
+> A skill that turns life-review into a structured self-interview — the AI plays a curious interviewer, not an analyst. Now with cross-cycle memory: prior reports become silent context, and each new report shows how you've changed.
 
 ---
 
 ## English (brief)
 
-**remeet-me** is a Claude Code skill for reviewing a life period — the past half-year, a year, or the time after a turning point. Instead of asking the AI to summarize you, it makes Claude act as a **curious interviewer** who tracks the threads surfacing in what you say, digs one layer at a time (fact → feeling → reason → pattern → change), and finally produces a profile report faithful to your own words.
+**remeet-me** is a skill for reviewing a life period — the past half-year, a year, or the time after a turning point. Instead of asking the AI to summarize you, it makes the AI act as a **curious interviewer** who tracks the threads surfacing in what you say, digs one layer at a time (fact → feeling → reason → pattern → change), and finally produces a profile report faithful to your own words.
 
 - **Role**: interviewer (draws you out), not analyst (labels you)
 - **Native language**: Chinese — the skill content is Chinese and works best for Chinese-speaking self-reflection
@@ -27,12 +27,17 @@
 ### Install
 
 ```bash
-# macOS / Linux
-git clone https://github.com/T2lighter/remeet-me.git ~/.claude/skills/remeet-me
-
-# Windows (PowerShell)
-git clone https://github.com/T2lighter/remeet-me.git "$env:USERPROFILE\.claude\skills\remeet-me"
+git clone https://github.com/T2lighter/remeet-me.git <skills-dir>/remeet-me
 ```
+
+Skills directory by runtime (`~` = `%USERPROFILE%` on Windows):
+
+| Runtime | Skills directory |
+|---|---|
+| Claude Code | `~/.claude/skills/` |
+| Codex | `~/.codex/skills/` |
+| Cursor | `~/.cursor/skills/` |
+| Other skills-compatible runtimes | see their docs — same install |
 
 Then tell Claude: *"帮我采访一下我自己这半年的变化"* — the skill auto-triggers.
 
@@ -42,7 +47,7 @@ Then tell Claude: *"帮我采访一下我自己这半年的变化"* — the skil
 
 ### 这是什么
 
-`remeet-me` 是一个 Claude Code 技能，帮你**通过自我采访，重新认识一个阶段的自己**——可能是最近半年、一年、某段关系结束后、某次职业转折之后。
+`remeet-me` 是一个 Agent Skills 标准技能，帮你**通过自我采访，重新认识一个阶段的自己**——可能是最近半年、一年、某段关系结束后、某次职业转折之后。
 
 它不是"帮我总结一下上半年"那种年度总结器。区别在这：
 
@@ -91,12 +96,17 @@ remeet-me 反过来：它**不给你答案**，它问你。一次一个问题，
 ### 如何安装
 
 ```bash
-# macOS / Linux
-git clone https://github.com/T2lighter/remeet-me.git ~/.claude/skills/remeet-me
-
-# Windows (PowerShell)
-git clone https://github.com/T2lighter/remeet-me.git "$env:USERPROFILE\.claude\skills\remeet-me"
+git clone https://github.com/T2lighter/remeet-me.git <skills目录>/remeet-me
 ```
+
+各 runtime 的 skills 目录（`~` 在 Windows 即 `%USERPROFILE%`）：
+
+| Runtime | Skills 目录 |
+|---|---|
+| Claude Code | `~/.claude/skills/` |
+| Codex | `~/.codex/skills/` |
+| Cursor | `~/.cursor/skills/` |
+| 其他 skills-compatible runtime | 见各自文档，装法相同 |
 
 如果 `remeet-me` 目录已存在，先删除或改名。安装后无需任何配置。
 
