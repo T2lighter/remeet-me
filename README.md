@@ -22,6 +22,7 @@
 - **Native language**: Chinese — the skill content is Chinese and works best for Chinese-speaking self-reflection
 - **Grounded in**: motivational interviewing (OARS), Bloom's taxonomy, qualitative-research methodology, life-direction research (PERMA, Ikigai, Oishi's three dimensions)
 - **Refuses**: chicken-soup "growth" narratives, labeling ("you are a ___ person"), forced positive framing
+- **Question log**: every question's on-the-spot decision (wording, trigger, technique, goal, rejected alternative — plus one line on how you responded) is silently logged to `question-log.md`, on by default, off anytime. The companion skill [why-ask-that](https://github.com/T2lighter/why-ask-that) later decodes "why did it ask that" into questioning craft you can keep.
 - **Cross-cycle memory**: finished reports are archived (never overwritten); on a new cycle, prior reports become silent background context, and the report gains a "longitudinal change" section.
 
 ### Install
@@ -76,7 +77,7 @@ Then tell Claude: *"帮我采访一下我自己这半年的变化"* — the skil
 - **动态追踪主线**：默认模块只是菜单，真正问什么由你说的话决定。
 - **断点续传**：长对话跨多次进行，进度存成 `progress.md`，随时接着聊。
 - **停止权在你**：AI 永不主动结束访谈、永不问"还有没有想留的"式收口试探——只有你明确说"这次采访就到这里"，访谈才收口。
-- **提问日志**：访谈中每个提问的现场决策（原文/触发/技法/目的/弃用）静默记录到 `question-log.md`，供配套技能 [why-ask-that](https://github.com/T2lighter/why-ask-that) 事后拆解"为什么这么问"，把提问手艺变成你能带走的能力。
+- **提问日志**：访谈中每个提问的现场决策（原文/触发/技法/目的/弃用）静默记录到 `question-log.md`，每条末尾还附一行你的回应要点——它是评"这一问效果如何"的唯一依据。默认开启，说"这轮别记提问日志"随时关；文件就在那，你随时可看。供配套技能 [why-ask-that](https://github.com/T2lighter/why-ask-that) 事后拆解"为什么这么问"，把提问手艺变成你能带走的能力。
 - **跨周期记忆**：每个阶段的报告归档保留（不互相覆盖）；新一轮访谈时，历史作为沉默的背景——不主动炫耀"记得你"，只在当前线索撞上历史重复时才轻轻提起。
 - **纵向变化**：报告里看主题怎么跨周期迁移、哪些词反复出现，把"单阶段快照"变成有时间线的东西。
 - **人物访谈报告**：最后生成一份有事件、有原因、有认知变化的报告，不是成就清单。
@@ -119,7 +120,8 @@ git clone https://github.com/T2lighter/remeet-me.git <skills目录>/remeet-me
 4. 随时可以说"先不展开这个""这个问题以后再说"，节奏由你控制。
 5. 聊得差不多了，说一声，Claude 生成报告（存为 `report.md`）——报告是阶段性总结，出了报告访谈还在继续，直到你说"这次采访就到这里"。
 6. 访谈可以跨多次对话——进度自动存在 `remeet-me/progress.md`。
-7. 会话结束（哪怕只聊了一半）可选**归档**成带日期范围的快照（如 `2026H1·month1~2`）；下次说"继续上次那个"就解档接着聊，没提名就开新访谈，历史作为背景记着。也可以"就做这一次"、不留历史。
+7. 说"这次采访就到这里"收口时，Claude 会轻轻提议一句：要不要让配套的 [why-ask-that](https://github.com/T2lighter/why-ask-that) 跑一份快速提问分析？——只提议，你点头它才动；不要也行，日志一条不少，之后随时可跑完整分析。
+8. 会话结束（哪怕只聊了一半）可选**归档**成带日期范围的快照（如 `2026H1·month1~2`）；下次说"继续上次那个"就解档接着聊，没提名就开新访谈，历史作为背景记着。也可以"就做这一次"、不留历史。
 
 ### 什么时候会触发
 
@@ -134,8 +136,10 @@ remeet-me/
 ├── SKILL.md              # 技能主体（核心指令）
 ├── references/
 │   └── techniques.md     # 提问技巧内功（按需深入查阅）
+├── test-prompts.json     # 触发测试用例（开发用，运行时不需要）
 ├── README.md
-└── LICENSE
+├── LICENSE
+└── .gitignore
 ```
 
 **运行时产物**（技能在你当前工作目录下创建，不纳入仓库）：
