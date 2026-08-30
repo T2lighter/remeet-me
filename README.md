@@ -95,6 +95,21 @@ remeet-me 反过来：它**不给你答案**，它问你。一次一个问题，
 
 动机式访谈（OARS）、布鲁姆认知阶梯、苏格拉底诘问、第一性原理、水平思考；人生方向研究（PERMA、Ikigai、Oishi《Life in Three Dimensions》、舒伯生涯彩虹图）。这些是技能内部挖深的锚点——访谈时你只会感到"被认真倾听"，不会被上理论课。
 
+### 技能的构造
+
+```
+SKILL.md（常驻现场）
+├── 进程状态机：三阶段、停止权在你、归档、静默写盘、危机红线
+├── 核心技巧：四种透镜、五层追问、主题权重、反射倾听
+└── 核心菜单：七模块速览（方向的地图）
+
+references/（按需展开，两翼对称）
+├── techniques.md   技巧的展开——"怎么问"
+└── anchors.md      方向的展开——"往哪挖"（Ikigai 四区诊断等）
+```
+
+访谈的素材永远来自你的原话——references 是看素材的镜头，不是提问的题库。
+
 ### 如何安装
 
 ```bash
@@ -135,7 +150,8 @@ git clone https://github.com/T2lighter/remeet-me.git <skills目录>/remeet-me
 remeet-me/
 ├── SKILL.md              # 技能主体（核心指令）
 ├── references/
-│   └── techniques.md     # 提问技巧内功（按需深入查阅）
+│   ├── techniques.md     # 提问技巧内功（按需深入查阅）
+│   └── anchors.md        # 理论锚点详解（Ikigai 四区诊断等，按需查阅）
 ├── test-prompts.json     # 触发测试用例（开发用，运行时不需要）
 ├── README.md
 ├── LICENSE
