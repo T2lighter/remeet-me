@@ -99,17 +99,20 @@ remeet-me 反过来：它**不给你答案**，它问你。一次一个问题，
 ### 技能的构造
 
 ```
-SKILL.md（常驻现场）
-├── 进程状态机：三阶段、停止权在你、归档、静默写盘、危机红线
+SKILL.md（常驻现场，~17KB）
+├── 进程状态机：三阶段、停止权在你、静默写盘、危机红线
 ├── 核心技巧：四种透镜、五层追问、主题权重、反射倾听
 └── 核心菜单：七模块速览（方向的地图）
 
-references/（按需展开，两翼对称）
-├── techniques.md   技巧的展开——"怎么问"
-└── anchors.md      方向的展开——"往哪挖"（Ikigai 四区诊断等）
+references/（按需展开，渐进披露）
+├── techniques.md           技巧的展开——"怎么问"（卡壳/防御时读）
+├── anchors.md              方向的展开——"往哪挖"（聊到职业/学习时读）
+├── question-log.md         提问日志格式规范（写日志时读）
+├── output-report.md        报告结构与自检清单（用户点头出报告时读）
+└── archive-continuity.md   归档 CHECKPOINT 与快照规则（收口归档时读）
 ```
 
-访谈的素材永远来自你的原话——references 是看素材的镜头，不是提问的题库。
+访谈的素材永远来自你的原话——references 是看素材的镜头，不是提问的题库。三个流程文件（日志/报告/归档）只在对应阶段加载，访谈进行中不占上下文。
 
 ### 如何安装
 
@@ -149,10 +152,13 @@ git clone https://github.com/T2lighter/remeet-me.git <skills目录>/remeet-me
 
 ```
 remeet-me/
-├── SKILL.md              # 技能主体（核心指令）
+├── SKILL.md              # 技能主体（核心指令 + 指针）
 ├── references/
-│   ├── techniques.md     # 提问技巧内功（按需深入查阅）
-│   └── anchors.md        # 理论锚点详解（Ikigai 四区诊断等，按需查阅）
+│   ├── techniques.md           # 提问技巧内功（按需深入查阅）
+│   ├── anchors.md              # 理论锚点详解（按需查阅）
+│   ├── question-log.md         # 提问日志格式规范（写日志时读）
+│   ├── output-report.md        # 报告结构与自检（生成报告时读）
+│   └── archive-continuity.md   # 归档 CHECKPOINT 与快照规则（收口时读）
 ├── test-prompts.json     # 触发测试用例（开发用，运行时不需要）
 ├── README.md
 ├── LICENSE
