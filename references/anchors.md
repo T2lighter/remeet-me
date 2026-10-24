@@ -94,4 +94,4 @@ P 积极情绪 / E 投入 / R 人际 / M 意义 / A 成就——各有一问：
 
 平衡轮找广度（哪里不对）、PERMA 找落差（哪根柱子短）、舒伯找时间线（角色怎么演变）、Oishi 找盲区（三维错配）。递进着用，但都是透镜，不是流程。
 
-> 来源参考：[痛点-概念地图](https://painpoint.tw/map/ikigai)、[壹心理-什么是 ikigai](https://www.xinli001.com/index.php/info/100497570)、[知乎-人生价值模型](https://zhuanlan.zhihu.com/p/686721312)、用户提供的人生方向理论访谈应用归纳（anchor-theories.md）
+> 来源参考：[痛点｜概念地图](https://painpoint.tw/map/ikigai)、[壹心理｜什么是 ikigai](https://www.xinli001.com/index.php/info/100497570)、[知乎｜人生价值模型](https://zhuanlan.zhihu.com/p/686721312)、用户提供的人生方向理论访谈应用归纳（anchor-theories.md）
