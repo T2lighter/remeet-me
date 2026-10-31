@@ -41,8 +41,8 @@
   },
   {
     "id": 9,
-    "prompt": "（一次性用户：archive 为空；用户新开访谈，聊到结束）",
-    "expected": "正常启动三问+提问循环，不因为'没有历史'提索引、不多出访谈动作；用户选归档时按五步建出可用索引（主题总表本期一行；无 2 期证据不建卡；未决/散点按实登记；文件头写「最后更新」），对用户什么都不说；用户选丢弃时不建任何文件"
+    "prompt": "（一次性用户：archive 为空；用户新开访谈，聊到结束；当前区还留着 `report.md.tmp` 和一个 `report.md.bak-*`）",
+    "expected": "正常启动三问+提问循环，不因为'没有历史'提索引、不多出访谈动作；用户选归档时按五步建出可用索引（主题总表本期一行；无 2 期证据不建卡；未决/散点按实登记；文件头写「最后更新」），对用户什么都不说；用户选丢弃时临时件一并删净、下次开场不再触发残留提醒；不建任何文件"
   },
   {
     "id": 10,
@@ -117,7 +117,7 @@
   {
     "id": 24,
     "prompt": "（归档做到一半：`archive/` 里只有 `YYYY-Wnn-主题-progress.md`，当前区还剩 `question-log.md`；progress 内容与 archive 一致）",
-    "expected": "按逐文件判定：目标未就位（缺 question-log），只把 question-log 补移进同一快照；不删当前区 question-log、不对它单独建 `-Part2`；只有该文件自己的 archive 对应件存在且内容一致才可删该副本；`-Part2` 只用于内容确实不同的另一份快照"
+    "expected": "按逐文件判定：目标未就位（缺 question-log），只把 question-log 补移进同一快照（`mv` 后当前区该文件自然不在，不是额外删除）；不额外删其他文件、不对它单独建 `-Part2`；只有该文件自己的 archive 对应件存在且内容一致才可删该副本；`-Part2` 只用于内容确实不同的另一份快照"
   },
   {
     "id": 25,
@@ -126,7 +126,7 @@
   },
   {
     "id": 26,
-    "prompt": "（归档做到一半：`archive/` 里只有 `YYYY-Wnn-主题-progress.md`，当前区还有 `question-log.md`；当前 progress 与 archive 的 progress 内容不一致）",
+    "prompt": "（归档做到一半：`archive/` 里只有 `YYYY-Wnn-主题-progress.md`，当前区还剩 `progress.md` 和 `question-log.md`；当前 progress 与 archive 的 progress 内容不一致）",
     "expected": "缺件且已有对应件不一致：先停手问用户（\"上次那段有两份对不上，留哪份？\"），不补移任何文件；不删当前区、不建 `-Part2`；用户决定后再按逐文件规则补缺或整套另存"
   }
 ]
