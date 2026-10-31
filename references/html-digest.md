@@ -101,7 +101,7 @@
   .hooks{margin-top:76px;padding-top:44px;border-top:1px solid var(--hairline);}
   .hook{display:flex;gap:18px;margin-bottom:18px;font-size:16.5px;color:var(--soft);}
   .hook .dot{color:var(--accent);}
-  .closing{text-align:center;font-size:20px;font-weight:650;line-height:2.15;margin-top:48px;}
+  .closing-quote{text-align:center;font-size:20px;font-weight:650;line-height:2.15;margin-top:48px;}
   .closing-src{text-align:center;font-size:13px;color:var(--muted);letter-spacing:.2em;margin-top:8px;}
   footer{margin-top:84px;padding-top:26px;border-top:1px solid var(--hairline);font-size:13px;color:var(--muted);text-align:center;line-height:2.1;}
   @media(max-width:480px){body{padding:60px 22px 80px;font-size:17px;}h1{font-size:30px;}blockquote{font-size:18px;}.movement h3{font-size:19px;}}
@@ -134,7 +134,7 @@
 
 <div class="hooks">
   <div class="hook"><span class="dot">○</span><span>一个开放问题。</span></div>
-  <div class="closing">「收尾原话」</div>
+  <div class="closing-quote">「收尾原话」</div>
   <div class="closing-src">—— 他，日期</div>
 </div>
 
