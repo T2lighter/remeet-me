@@ -117,6 +117,7 @@ remeet-me/
     ├── 2026-W41-换工作-progress.md
     ├── 2026-W41-换工作-question-log.md
     ├── 2026-W42-搬家-progress.md
+    ├── 2026-W43-主线与小开场-沉淀.html
     └── 2026-W34-体检-report.md
 ```
 
@@ -142,7 +143,9 @@ remeet-me/
 
 **归档/丢弃的执行机制（省 token）**：归档用 `mv` 把三件套（`report.md` 有则）移进 `archive/` 改名（mv 不需要先读文件）；主题名从当前 progress.md 的「基本信息」节用 `head`/`grep` 取一行即可，不为取名字读全文；丢弃用 `rm` 删工作文件（含 `report.md.tmp` / `report.md.bak-*`）。三者都不整份读。**归档完成 = 该有的都到位（`report.md` 有且属于本期、已过七节判据才算；没写就不算缺）**，不是 `progress.md` 移走就算完；只移了一部分时，按 `references/archive-continuity.md` 的「写盘回执与幂等」处置：只补缺，不把已移走的移回、不重跑整步；写失败先判效果状态，`unknown` 先查证再决定，不自动重试。
 
-🔴 收口走到归档确认时，**先读 `references/archive-continuity.md`**，按里面的 CHECKPOINT（归档三选、命名规则、丢弃不留历史）以及「写盘回执与幂等」（四类写操作的成功判据 / 部分成功 / 幂等键）处置——快照怎么存、怎么改名、写失败怎么办，全在那份文件里，这里不重复。
+🔴 收口走到归档确认时，**先读 `references/archive-continuity.md`**，按里面的 CHECKPOINT（归档三选、命名规则、丢弃不留历史）以及「写盘回执与幂等」（五类写操作的成功判据 / 部分成功 / 幂等键）处置——快照怎么存、怎么改名、写失败怎么办，全在那份文件里，这里不重复。
+
+归档五步完成后，默认按 `references/html-digest.md` 生成 HTML 沉淀；HTML 失败不影响归档完成，如实说"这次沉淀没生成，下次补"。
 
 ### 读历史：默认轻读，指定时深读
 
@@ -426,6 +429,7 @@ remeet-me/
 - `references/question-log.md`：写提问日志时读（格式规范）。
 - `references/output-report.md`：用户点头生成报告时读（报告结构与自检）。
 - `references/archive-continuity.md`：收口走到归档确认时读（CHECKPOINT 与快照规则）。
+- `references/html-digest.md`：归档五步完成、准备生成 HTML 沉淀时读（结构、行文、自检）。
 - `references/memory-index.md`：**启动比对期号（只读第 7 节）**、**会话压缩后重读**、归档沉淀、建/改索引、重建索引、迁移旧快照时读。其余访谈时间不读。
 - `references/migration.md`：首次建索引、把旧 archive 回溯补进索引、大规模重建时读（范围 / 来源优先级 / 分批 / 验证清单 12 条）。日常归档不读。
 - `references/techniques.md`：当你在某个具体情境下需要更精细的提问技巧时去读。里面有 OARS 四技术详解、洪敬谱"六法"及适用场景、沉默策略（"数到七"）、"为什么 vs 如何"的边界、常见五类错误、关系管理、间接探针（羡慕 / 逃避 / 时间去向——问不出价值观时的三条绕行路）、苏格拉底六步（观念辨析的追问链）。**不需要每次都读**——SKILL.md 里的核心（含四种透镜）已经够你上场；遇到拿不准怎么追问、对方防御、话题卡住时再翻。

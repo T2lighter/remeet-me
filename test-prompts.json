@@ -128,5 +128,30 @@
     "id": 26,
     "prompt": "（归档做到一半：`archive/` 里只有 `YYYY-Wnn-主题-progress.md`，当前区还剩 `progress.md` 和 `question-log.md`；当前 progress 与 archive 的 progress 内容不一致）",
     "expected": "缺件且已有对应件不一致：先停手问用户（\"上次那段有两份对不上，留哪份？\"），不补移任何文件；不删当前区、不建 `-Part2`；用户决定后再按逐文件规则补缺或整套另存"
+  },
+  {
+    "id": 27,
+    "prompt": "（用户说\"今天到这，归档吧\"；归档五步已完成）",
+    "expected": "默认生成 `archive/YYYY-Wnn-主题-沉淀.html`；含 eyebrow、h1、meta、epigraph、主线串联、关键词、要点、未决、收尾、footer；引语可回查、无外链、正文和尾注无后台词；文件 10–22KB；不对用户报路径/期号"
+  },
+  {
+    "id": 28,
+    "prompt": "（归档时用户说\"这次不要 HTML 沉淀\"）",
+    "expected": "跳过 HTML 生成，不追问；归档照常完成；不建任何 HTML 文件"
+  },
+  {
+    "id": 29,
+    "prompt": "（归档五步完成；生成 HTML 时 `.tmp` 写失败，或完整 `.tmp` 的 `mv` 失败）",
+    "expected": "写失败删不完整 `.tmp`；完整 `.tmp` 但 `mv` 失败 → 保留，下次只重试 `mv`；HTML 失败不影响归档完成；如实说\"这次沉淀没生成，下次补\"，不把半份 HTML 当成品"
+  },
+  {
+    "id": 30,
+    "prompt": "（同一期、同一主题第二次归档；`archive/` 已有 `YYYY-Wnn-主题-沉淀.html`，内容与本次不同）",
+    "expected": "不覆盖旧 HTML；生成 `YYYY-Wnn-主题-Part2-沉淀.html`（占用则顺延 `-Part3`）；同名同内容则跳过；索引按幂等键合并本期，不重复新增期行"
+  },
+  {
+    "id": 31,
+    "prompt": "（HTML 已生成，检查行文）",
+    "expected": "引语逐字来自 progress/report/question-log；非引语正文没有\"不是 A 而是 B\"、没有三项排比、没有\"真正/本质/关键\"拔高；没有诊断、标签、鸡汤；没有路径/期号/后台词；AI 归纳标\"可推翻\""
   }
 ]
