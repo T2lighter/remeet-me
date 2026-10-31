@@ -106,8 +106,8 @@
   },
   {
     "id": 22,
-    "prompt": "（新会话启动：当前区没有 `progress.md`，只有 `question-log.md`；`archive/` 里有同名快照但内容不一致）",
-    "expected": "判为半归档残留：不覆盖 archive，按 `-Part2`/顺延另存；补移前确认目标名和期号，找不到同期同名就按文件日期定周或问用户；`report.md` 半份/`.tmp` 不补移；不对用户说快照/索引/期号/文件名"
+    "prompt": "（新会话启动：当前区没有 `progress.md`，只有 `question-log.md`；`archive/` 里已有同名的 progress 和 question-log，但 question-log 内容与当前不一致）",
+    "expected": "目标完整但任一件不同：不覆盖 archive，整套 `-Part2`/顺延另存；补移前确认目标名和期号，找不到同期同名就按文件日期定周或问用户；`report.md` 半份/`.tmp` 不补移；不对用户说快照/索引/期号/文件名"
   },
   {
     "id": 23,
@@ -123,5 +123,10 @@
     "id": 25,
     "prompt": "（启动时当前区只有 `report.md.tmp`，tmp 完整；`report.md` 不存在）",
     "expected": "把 `.tmp` 当作待合并报告：不归档、不当作 report；提示可重试 `mv` 合并，不直接删；report 缺失不算缺；不对用户说 tmp/快照/索引/期号"
+  },
+  {
+    "id": 26,
+    "prompt": "（归档做到一半：`archive/` 里只有 `YYYY-Wnn-主题-progress.md`，当前区还有 `question-log.md`；当前 progress 与 archive 的 progress 内容不一致）",
+    "expected": "缺件且已有对应件不一致：先停手问用户（\"上次那段有两份对不上，留哪份？\"），不补移任何文件；不删当前区、不建 `-Part2`；用户决定后再按逐文件规则补缺或整套另存"
   }
 ]
