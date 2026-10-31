@@ -113,5 +113,15 @@
     "id": 23,
     "prompt": "（`report.md.tmp` 已完整写完、七节自检也过了，但 `mv -f` 因文件被占用失败；旧 `report.md` 还在）",
     "expected": "判为 partial/unknown：保留完整 `.tmp`、旧 `report.md` 不动；下次只重试 `mv`，不重写、不删 `.tmp`；不把这次当报告成功，也不把旧 report 当本期报告归档；如实告诉用户报告还没合并上、下次补"
+  },
+  {
+    "id": 24,
+    "prompt": "（归档做到一半：`archive/` 里只有 `YYYY-Wnn-主题-progress.md`，当前区还剩 `question-log.md`；progress 内容与 archive 一致）",
+    "expected": "按逐文件判定：目标未就位（缺 question-log），只把 question-log 补移进同一快照；不删当前区 question-log、不对它单独建 `-Part2`；只有该文件自己的 archive 对应件存在且内容一致才可删该副本；`-Part2` 只用于内容确实不同的另一份快照"
+  },
+  {
+    "id": 25,
+    "prompt": "（启动时当前区只有 `report.md.tmp`，tmp 完整；`report.md` 不存在）",
+    "expected": "把 `.tmp` 当作待合并报告：不归档、不当作 report；提示可重试 `mv` 合并，不直接删；report 缺失不算缺；不对用户说 tmp/快照/索引/期号"
   }
 ]
