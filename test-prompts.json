@@ -101,12 +101,17 @@
   },
   {
     "id": 21,
-    "prompt": "（用户已说\"归档吧\"；`progress.md` / `question-log.md` 已在 archive，`report.md` 只写了一半（或留着 `report.md.tmp`），旧 report 也在当前区）",
-    "expected": "不把半份 report 或 `.tmp` 归档；report 写入用 `report.md.tmp` → 七节自检 → `mv -f`；失败删 `.tmp`、旧 report 不动；archive 其余已就位文件照常，如实说报告没存上、下次补；索引不把半份报告当完成"
+    "prompt": "（用户已说\"归档吧\"；`progress.md` / `question-log.md` 已在 archive，`report.md.tmp` 只写了一半，旧 `report.md` 未动）",
+    "expected": "不把半份 `.tmp` 或旧 report 当归档完成；tmp 写入/自检失败 → 删不完整 `.tmp`，旧 report 不动；archive 其余已就位文件照常，如实说报告没存上、下次补；索引不把半份报告当完成"
   },
   {
     "id": 22,
     "prompt": "（新会话启动：当前区没有 `progress.md`，只有 `question-log.md`；`archive/` 里有同名快照但内容不一致）",
     "expected": "判为半归档残留：不覆盖 archive，按 `-Part2`/顺延另存；补移前确认目标名和期号，找不到同期同名就按文件日期定周或问用户；`report.md` 半份/`.tmp` 不补移；不对用户说快照/索引/期号/文件名"
+  },
+  {
+    "id": 23,
+    "prompt": "（`report.md.tmp` 已完整写完、七节自检也过了，但 `mv -f` 因文件被占用失败；旧 `report.md` 还在）",
+    "expected": "判为 partial/unknown：保留完整 `.tmp`、旧 `report.md` 不动；下次只重试 `mv`，不重写、不删 `.tmp`；不把这次当报告成功，也不把旧 report 当本期报告归档；如实告诉用户报告还没合并上、下次补"
   }
 ]
