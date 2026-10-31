@@ -132,7 +132,7 @@
   {
     "id": 27,
     "prompt": "（用户说\"今天到这，归档吧\"；归档五步已完成）",
-    "expected": "默认生成 `archive/YYYY-Wnn-主题-沉淀.html`；含 eyebrow、h1、meta、epigraph、主线串联、关键词、要点、未决、收尾、footer；引语可回查、无外链、正文和尾注无后台词；文件 10–22KB；不对用户报路径/期号"
+    "expected": "默认生成 `archive/YYYY-Wnn-主题-沉淀.html`；含 eyebrow、h1、meta、epigraph、主线串联、关键词、要点、未决、收尾、footer；引语可回查、无外链、正文和尾注无后台词；文件 ≤22KB，按素材定，不凑数；不对用户报路径/期号"
   },
   {
     "id": 28,
