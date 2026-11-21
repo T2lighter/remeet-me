@@ -35,7 +35,7 @@ Skills directory by runtime (`~` = `%USERPROFILE%` on Windows):
 
 | Runtime | Skills directory |
 |---|---|
-| Claude Code | `~/.claude/skills/` |
+| Claude Code | `~/.agents/skills/` |
 | Codex | `~/.codex/skills/` |
 | Cursor | `~/.cursor/skills/` |
 | Other skills-compatible runtimes | see their docs — same install |
@@ -101,7 +101,7 @@ remeet-me 反过来：它**不给你答案**，它问你。一次一个主问，
 ### 技能的构造
 
 ```
-SKILL.md（常驻现场，~20KB）
+SKILL.md（常驻现场，~63KB）
 ├── 进程状态机：三阶段、停止权在你、静默写盘、危机红线
 ├── 核心技巧：四种透镜、五层追问、主题权重、反射倾听
 └── 核心菜单：七模块速览（方向的地图）
@@ -129,7 +129,7 @@ git clone https://github.com/T2lighter/remeet-me.git <skills目录>/remeet-me
 
 | Runtime | Skills 目录 |
 |---|---|
-| Claude Code | `~/.claude/skills/` |
+| Claude Code | `~/.agents/skills/` |
 | Codex | `~/.codex/skills/` |
 | Cursor | `~/.cursor/skills/` |
 | 其他 skills-compatible runtime | 见各自文档，装法相同 |
@@ -168,7 +168,6 @@ remeet-me/
 │   ├── html-digest.md          # HTML 沉淀结构、行文与自检（归档后生成时读）
 │   ├── memory-index.md         # 跨期记忆索引（归档/重建/迁移时读）
 │   └── migration.md            # 首次建索引与旧快照回溯（只在那时读）
-├── test-prompts.json     # 触发测试用例（开发用，运行时不需要）
 ├── README.md
 ├── LICENSE
 └── .gitignore

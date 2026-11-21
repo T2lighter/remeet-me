@@ -14,3 +14,8 @@ desktop.ini
 **/progress.md
 **/report.md
 **/archive/
+
+# Dev-only (not part of the published skill)
+test-prompts.json
+AUDIT.md
+evals/
